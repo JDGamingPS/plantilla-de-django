@@ -1,5 +1,8 @@
 
+from apps.clientes import *
 from django.db import models
+
+from apps.clientes.models.restaurante import Restaurante
 
 class Cliente(models.Model):
     nombres = models.CharField(
@@ -33,6 +36,9 @@ class Cliente(models.Model):
         max_digits = 10,
         blank = True, null=True
     )
+    
+    #Relacion de tablas
+    restaurante = models.ForeignKey(Restaurante, on_delete= models.SET_NULL, null = True)
 
 
     def __str__(self):
@@ -40,7 +46,9 @@ class Cliente(models.Model):
     
 
     class Meta:
-        app_label = 'clientes'
+        
         db_table = 'cliente'
-        verbose_name = "Cliente"
+        verbose_name = "Clientes"
         verbose_name_plural = "Clientes"
+        
+    

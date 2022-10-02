@@ -12,42 +12,38 @@
     />
   </head>
   <body>
-
-    <div class="container ">
-      <div class="col-4 justify-content-center">
-        <h3>Lista Clientes</h3>
-      </div>
-      <div class="col justify-content-center">
-        <a class="btn btn-primary" href="formulario_cliente" role="button">Agregar Cliente</a>
-      </div>
-
+    <div class="col-4 ">
+      <h3>Detalle Cliente</h3>
     </div>
     <div class="contaier">
       <div class="row justify-content-center">
 
-        <div class="col-8">
+        <div class="col-6">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Nombres</th>
-                <th scope="col">Apellidos</th>
-                <th scope="col">Nunero de identidad</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Ibicacion</th>
+                <th scope="col">Pais</th>
               </tr>
             </thead>
             <tbody>
-              {% for cli in cliente %}
+
+                <th scope="row">{{restaurante.id}}</th>
+                <td>{{restaurante.nombre}}</td>
+                <td>{{restaurante.ubicacion}}</td>
+                <td>{{restaurante.pais}}</td>
+
+
+              <!-- {% for cli in cliente %}
               <tr>
                 <th scope="row">{{cli.id}}</th>
                 <td>{{cli.nombres}}</td>
                 <td>{{cli.apellidos}}</td>
                 <td>{{cli.numero_identidad}}</td>
-                <td><a class="btn btn-info" href="detalle_cliente/{{cli.id}}" role="button">Ver detalle</a></td>
-                <td><a class="btn btn-warning" href="formulario_cliente/{{cli.id}}" role="button">Editar</a></td>
-                <td><a class="btn btn-danger" href="#" role="button">Eliminar</a></td>
-
               </tr>
-              {% endfor %}
+              {% endfor %} -->
               
               
             </tbody>
@@ -55,8 +51,6 @@
         </div>
       </div>
     </div>
-
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

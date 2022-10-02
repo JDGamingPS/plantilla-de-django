@@ -9,3 +9,10 @@ class ClientesConfig(AppConfig):
     name = 'apps.clientes'
     verbose_name = 'Cliente'
     verbose_name_plural = 'Clientes'
+    
+class ClientesConfig(AppConfig):
+    """Configuration for users and permissions functionalties."""
+
+    name = 'apps.clientes'
+    verbose_name = 'Restaurante'
+    verbose_name_plural = 'Restaurantes'
